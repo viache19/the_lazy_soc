@@ -1,3 +1,4 @@
+import services
 def show_menu():
     print("___________.__             .____                             _________________  _________")
     print("\__    ___/|  |__   ____   |    |   _____  ___________.__.  /   _____/\_____  \ \_   ___ \ ")
@@ -14,7 +15,7 @@ def show_menu():
 
 def execute_option(option):
     if option == 1:
-        print("Has elegido la option 1")
+        services.print_information()
     elif option == 2:
         print("Has elegido la option 2")
     elif option == 3:
