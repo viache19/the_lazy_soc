@@ -16,6 +16,7 @@ def show_menu():
 def execute_option(option):
     if option == 1:
         services.print_information()
+        input("Press Enter to reload")
     elif option == 2:
         print("Has elegido la option 2")
     elif option == 3:
