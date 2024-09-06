@@ -3,6 +3,7 @@ import os
 import psutil
 import socket
 import sys
+import tempfile
 
 from math import log, pow
 def readable_size(size_in_bytes):
@@ -17,7 +18,7 @@ def readable_size(size_in_bytes):
 
     return "%s %s" % (s, size_name[i])
 
-def print_information():  
+def print_system_information():
     print("System info: ")
     print("-" * 30)
 
@@ -39,15 +40,15 @@ def print_information():
 
     print("\nRAM usage: ")
     memory = psutil.virtual_memory()
-    print("  Total:", memory.total)
-    print("  Available:", memory.available)
-    print("  Used:", memory.used)
+    print("  Total:", readable_size(memory.total))
+    print("  Available:", readable_size(memory.available))
+    print("  Used:", readable_size(memory.used))
 
     print("\nDisk usage: ")
     disk = psutil.disk_usage('/')
-    print("  Total:", disk.total)
-    print("  Available/Free: ", disk.free)
-    print("  Used:", disk.used)
+    print("  Total:", readable_size(disk.total))
+    print("  Available/Free: ", readable_size(disk.free))
+    print("  Used:", readable_size(disk.used))
 
     print("\nNetwork info:")
     print("Hostname:", socket.gethostname())

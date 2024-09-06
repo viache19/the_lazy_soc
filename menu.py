@@ -15,14 +15,14 @@ def show_menu():
 
 def execute_option(option):
     if option == 1:
-        services.print_information()
-        input("Press Enter to continue")
+        services.print_system_information()
+        input("\nPress Enter 2X to continue")
     elif option == 2:
         print("Has elegido la option 2")
     elif option == 3:
         print("Has elegido la option 3")
     elif option == 4:
-        print("Saliendo del programa...")
+        print("Bye bye...")
     else:
         print("Not valid input, please select the options")
 
